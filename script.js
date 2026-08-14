@@ -44,18 +44,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.13 });
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-const testimonials = [...document.querySelectorAll(".testimonial")];
-const dots = [...document.querySelectorAll(".slider-dots button")];
-let testimonialIndex = 0;
-const showTestimonial = (index) => {
-  testimonialIndex = (index + testimonials.length) % testimonials.length;
-  testimonials.forEach((item, itemIndex) => item.classList.toggle("active", itemIndex === testimonialIndex));
-  dots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === testimonialIndex));
-};
-document.querySelector(".slider-button.prev")?.addEventListener("click", () => showTestimonial(testimonialIndex - 1));
-document.querySelector(".slider-button.next")?.addEventListener("click", () => showTestimonial(testimonialIndex + 1));
-dots.forEach((dot, index) => dot.addEventListener("click", () => showTestimonial(index)));
-
 document.querySelectorAll(".faq-item button").forEach((button) => {
   button.addEventListener("click", () => {
     const item = button.closest(".faq-item");
@@ -75,6 +63,27 @@ document.querySelectorAll(".faq-item button").forEach((button) => {
 
 document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const status = event.currentTarget.querySelector(".form-status");
-  status.textContent = "Mensagem preparada. Conecte este formulário ao seu e-mail ou WhatsApp para receber os contatos.";
+  const form = event.currentTarget;
+  const status = form.querySelector(".form-status");
+  const data = new FormData(form);
+
+  const nome = (data.get("nome") || "").toString().trim();
+  const email = (data.get("email") || "").toString().trim();
+  const telefone = (data.get("telefone") || "").toString().trim();
+  const servico = (data.get("servico") || "").toString().trim();
+  const mensagem = (data.get("mensagem") || "").toString().trim();
+
+  const texto =
+    `Olá, RuNo! Vim pelo site.%0A%0A` +
+    `*Nome:* ${nome}%0A` +
+    `*E-mail:* ${email}%0A` +
+    `*Telefone:* ${telefone}%0A` +
+    `*Serviço:* ${servico}` +
+    (mensagem ? `%0A*Mensagem:* ${mensagem}` : "");
+
+  const url = `https://wa.me/5511985986815?text=${texto}`;
+
+  status.textContent = "Tudo certo! Abrindo o WhatsApp com a sua mensagem…";
+  window.open(url, "_blank", "noopener");
+  form.reset();
 });
