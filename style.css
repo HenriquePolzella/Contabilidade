@@ -43,6 +43,12 @@ html{scroll-padding-top:165px}
   border-radius:8px;
   filter:none;
 }
+/* Ícones Font Awesome (WhatsApp e Instagram) na lista de contato */
+.contact-data>a>span i{
+  font-size:19px;
+  line-height:1;
+  color:#fff;
+}
 @media(max-width:1080px){
   html{scroll-padding-top:125px}
   .header,
@@ -340,6 +346,21 @@ html{scroll-padding-top:165px}
 
   .contact-copy h2{
     font-size:clamp(31px,9vw,37px);
+  }
+
+  /* no mobile o anel laranja decorativo estava cobrindo as linhas de
+     contato (WhatsApp/E-mail/Instagram); reduzimos e jogamos para o
+     canto, abaixo do texto */
+  .contact-copy{
+    padding-bottom:120px;
+  }
+
+  .contact-copy::after{
+    width:150px;
+    height:150px;
+    right:-48px;
+    bottom:-48px;
+    border-width:22px;
   }
 
   .contact-data a,
