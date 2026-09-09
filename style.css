@@ -49,6 +49,53 @@ html{scroll-padding-top:165px}
   line-height:1;
   color:#fff;
 }
+
+/* Números dentro da seção de depoimentos */
+.testimonial-stats{display:flex;justify-content:center;gap:70px;margin:0 auto 52px;flex-wrap:wrap}
+.testimonial-stats .stat{text-align:center}
+.testimonial-stats .stat strong{display:block;font-size:clamp(38px,4.2vw,54px);font-weight:700;line-height:1;color:var(--orange)}
+.testimonial-stats .stat span{display:block;margin-top:7px;color:#c7d2e1;font-size:15px}
+
+/* Carrossel de logos de clientes */
+.clients-section{padding:82px 0;background:#fff;overflow:hidden}
+.clients-section .section-inner{padding:0 30px}
+.logo-marquee{max-width:520px;margin:42px auto 0;padding:16px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.logo-track{display:flex;width:max-content;align-items:center;animation:logoScroll 24s linear infinite}
+.logo-marquee:hover .logo-track{animation-play-state:paused}
+/* espaçamento por margem (não "gap") para o loop de -50% ficar sem emenda/parada */
+/* cada logo aparece com o próprio fundo, apenas com cantos arredondados */
+.logo-item{flex:0 0 auto;display:grid;place-items:center;height:142px;margin-right:40px;transition:transform .28s ease}
+.logo-item:hover{transform:scale(1.09)}
+.logo-item img{max-height:142px;max-width:185px;width:auto;height:auto;object-fit:contain;border-radius:18px;display:block}
+@keyframes logoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Ícones do slider de depoimentos */
+.stars i{font-size:15px}
+.slider-button i{font-size:18px;line-height:1}
+
+@media(max-width:720px){
+  .testimonial-stats{gap:44px;margin-bottom:40px}
+  .clients-section{padding:58px 0}
+  .logo-item{height:104px;margin-right:26px}
+  .logo-item img{max-height:104px;max-width:132px;border-radius:14px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .logo-track{animation:none}
+}
+
+/* Seção de depoimentos mais compacta no desktop (melhor equilíbrio em 100%) */
+@media(min-width:721px){
+  .testimonials-section{padding-block:86px}
+  .testimonials-section .section-heading{margin-bottom:34px}
+  .testimonials-section h2{font-size:clamp(30px,3.1vw,44px)}
+  .testimonial-stats{margin-bottom:42px}
+  .testimonial-stats .stat strong{font-size:clamp(32px,3.2vw,42px)}
+  .testimonial-track{min-height:300px}
+  .testimonial{padding:36px 46px}
+  .testimonial blockquote{margin:20px 0 28px;font-size:21px}
+  .clients-strip{margin-top:50px}
+}
 @media(max-width:1080px){
   html{scroll-padding-top:125px}
   .header,
