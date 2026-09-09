@@ -26,6 +26,8 @@
       <a href="#sobre">Sobre</a>
       <a class="services-link" href="#servicos">Serviços</a>
       <a href="#planejamento">Planejamento</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#clientes">Clientes</a>
       <a href="#historia">Nossa História</a>
       <a href="#duvidas">Dúvidas Frequentes</a>
       <a href="#contato">Contato</a>
@@ -197,6 +199,73 @@
       </div>
     </section>
 
+    <!-- DEPOIMENTOS / FEEDBACKS
+         >>> CONTEÚDO DE EXEMPLO (FICTÍCIO) — substituir números, depoimentos e nomes
+             de clientes por informações reais antes de divulgar o site. <<<
+         Para adicionar/remover depoimentos, copie ou apague um <article class="testimonial">.
+         O primeiro deve ter a classe "active". As estrelas e as bolinhas se ajustam sozinhas. -->
+    <section id="depoimentos" class="section testimonials-section">
+      <div class="section-inner">
+        <div class="section-heading light reveal">
+          <span class="eyebrow">O QUE DIZEM DE NÓS</span>
+          <h2>Quem confia na RuNo<br><em>recomenda de olhos fechados</em></h2>
+        </div>
+
+        <!-- Números (substituir pelos valores reais) -->
+        <div class="testimonial-stats reveal">
+          <div class="stat"><strong>+120</strong><span>clientes atendidos</span></div>
+          <div class="stat"><strong>8+</strong><span>anos de experiência</span></div>
+        </div>
+
+        <div class="testimonial-wrap reveal">
+          <button class="slider-button" type="button" data-dir="prev" aria-label="Depoimento anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="testimonial-track">
+            <article class="testimonial active">
+              <div class="stars" aria-label="5 de 5 estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <blockquote>Trocar de contador sempre me deu medo, mas a RuNo cuidou de tudo e me explicou cada passo numa linguagem que eu entendo. Hoje durmo tranquila.</blockquote>
+              <div class="client"><span>M</span><p><strong>Mariana Alves</strong><small>Bella Hair Studio · Salão de beleza</small></p></div>
+            </article>
+            <article class="testimonial">
+              <div class="stars" aria-label="5 de 5 estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <blockquote>Reduzi meus impostos de forma 100% legal e ainda recuperei créditos que eu nem sabia que tinha. Atendimento rápido e sempre com uma pessoa de verdade.</blockquote>
+              <div class="client"><span>R</span><p><strong>Rafael Souza</strong><small>TechNova Sistemas · Prestador de serviços</small></p></div>
+            </article>
+            <article class="testimonial">
+              <div class="stars" aria-label="5 de 5 estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <blockquote>Abrimos a empresa com a RuNo do zero. Sempre que temos dúvida, é só chamar no WhatsApp e alguém responde. Uma parceria que faz toda a diferença.</blockquote>
+              <div class="client"><span>C</span><p><strong>Cláudia e Pedro</strong><small>Padaria Pão Quente · Comércio</small></p></div>
+            </article>
+          </div>
+          <button class="slider-button" type="button" data-dir="next" aria-label="Próximo depoimento"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="slider-dots" aria-label="Selecionar depoimento"></div>
+      </div>
+    </section>
+
+    <!-- CLIENTES — CARROSSEL DE LOGOS
+         >>> LOGOS ILUSTRATIVOS (FICTÍCIOS). Substitua o conteúdo de cada
+             <div class="logo-item"> pelo logo real do cliente. O ideal é usar imagem:
+             <div class="logo-item"><img src="assets/cliente-nome.png" alt="Nome do cliente"></div>
+             O carrossel duplica os logos sozinho para rolar em loop contínuo. <<< -->
+    <section id="clientes" class="section clients-section">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <span class="eyebrow">NOSSOS CLIENTES</span>
+          <h2>Empresas que <em>confiam na RuNo</em></h2>
+        </div>
+        <div class="logo-marquee reveal" aria-label="Logos de clientes">
+        <div class="logo-track">
+          <div class="logo-item"><img src="assets/cliente-adega-guta.jpg" alt="Adega Guta"></div>
+          <div class="logo-item"><img src="assets/cliente-adega-esquina.jpg" alt="Adega da Esquina"></div>
+          <div class="logo-item"><img src="assets/cliente-lfb.jpg" alt="LFB Instalações"></div>
+          <div class="logo-item"><img src="assets/cliente-serprint.jpg" alt="Serprint"></div>
+          <div class="logo-item"><img src="assets/cliente-leblanc.jpg" alt="LeBlanc Barbearia"></div>
+          <div class="logo-item"><img src="assets/cliente-vitale.png" alt="Vitale Cuidados Domiciliares"></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
     <section id="historia" class="section history-section">
       <div class="section-inner">
         <div class="section-heading reveal">
@@ -248,7 +317,7 @@
           <p>Conte um pouco sobre o seu negócio. Nossa equipe entra em contato — com atendimento humano de verdade — para entender o que você precisa e mostrar que contabilidade pode ser simples e eficiente.</p>
           <div class="contact-data">
             <a href="https://wa.me/5511985986815"><span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span><p><small>WHATSAPP</small><strong>(11) 98598-6815 · (11) 98272-1498</strong></p></a>
-            <a href="mailto:contato@runocontabilidade.com.br"><span>@</span><p><small>E-MAIL</small><strong>contato@runocontabil.com.br</strong></p></a>
+            <a href="mailto:contato@runocontabil.com.br"><span>@</span><p><small>E-MAIL</small><strong>contato@runocontabil.com.br</strong></p></a>
             <a href="https://www.instagram.com/runo.contabil/" target="_blank" rel="noopener"><span><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><p><small>INSTAGRAM</small><strong>@runo.contabil</strong></p></a>
           </div>
         </div>
@@ -279,7 +348,7 @@
       <div class="footer-brand"><img src="assets/logo-rn.png" alt="RuNo Serviços Contábeis"><p>Contabilidade descomplicada e humana, feita para todos. Cuidamos do seu negócio como se fosse nosso.</p></div>
       <div><h3>Navegação</h3><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#planejamento">Planejamento Tributário</a></div>
       <div><h3>Serviços</h3><a href="#servicos">Consultoria contábil</a><a href="#servicos">Gestão fiscal</a><a href="#servicos">Planejamento tributário</a><a href="#servicos">Departamento pessoal</a></div>
-      <div><h3>Atendimento</h3><a href="https://wa.me/5511985986815">WhatsApp (11) 98598-6815</a><a href="https://wa.me/5511982721498">WhatsApp (11) 98272-1498</a><a href="mailto:contato@runocontabilidade.com.br">contato@runocontabilidade.com.br</a><a href="https://www.instagram.com/runo.contabil/" target="_blank" rel="noopener">Instagram @runo.contabil</a><a href="https://www.facebook.com/profile.php?id=61559980351975" target="_blank" rel="noopener">Facebook</a></div>
+      <div><h3>Atendimento</h3><a href="https://wa.me/5511985986815">WhatsApp (11) 98598-6815</a><a href="https://wa.me/5511982721498">WhatsApp (11) 98272-1498</a><a href="mailto:contato@runocontabil.com.br">contato@runocontabil.com.br</a><a href="https://www.instagram.com/runo.contabil/" target="_blank" rel="noopener">Instagram @runo.contabil</a><a href="https://www.facebook.com/profile.php?id=61559980351975" target="_blank" rel="noopener">Facebook</a></div>
     </div>
     <div class="footer-bottom"><p>© 2026 RuNo Serviços Contábeis. Todos os direitos reservados.</p><p>Mais que números, cuidamos do seu negócio.</p></div>
   </footer>
